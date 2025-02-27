@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Image Gallery Project
 
-## Getting Started
+A modern, responsive image gallery application built with Next.js and Unsplash API.
 
-First, run the development server:
+## 🚀 Features
+
+- Server-side rendering for optimal performance
+- Real-time image search
+- Favorite images system with local storage
+- Responsive grid layout
+- Modern UI with Ant Design components
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js 13+
+- **UI Library:** Ant Design
+- **Styling:** CSS Modules
+- **Image API:** Unsplash
+- **State Management:** React Context
+- **Data Persistence:** Local Storage
+
+## 🏗 Project Structure
+
+```plaintext
+imageGallery/
+├── app/                    # Next.js app directory
+├── components/            # React components
+├── styles/               # CSS modules
+├── api/                  # API integration
+├── services/            # Utility functions
+└── public/              # Static assets
+```
+
+## 🚦 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create `.env` file:
+
+```env
+UNSPLASH_ACCESS_KEY=your_access_key_here
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Development
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Starting dev server:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev
+```
 
-## Learn More
+- **Building for production:**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Running production build:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## 🎨 Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Gallery:** Main component for displaying images
+- **SearchBar:** Search functionality with Ant Design
+- **ImageContainer:** Individual image wrapper
+- **FavoriteBadge:** Favorites system integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Responsive grid layout
+- Adaptive image sizing
+- Touch-friendly interactions
+
+## 🔑 Key Features
+
+1. **Image Search:**
+
+   - Real-time search functionality
+   - Integration with Unsplash API
+   - Error handling
+
+2. **Favorites System:**
+
+   - Local storage persistence
+   - Add/remove functionality
+   - Synchronized state management
+
+3. **Performance:**
+   - Server-side rendering
+   - Image optimization
+   - Lazy loading
+
+## 📄 License
+
+MIT License
+
+## 👤 Author
+
+Anatolii Tserkunyk
