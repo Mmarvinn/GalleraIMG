@@ -23,10 +23,10 @@ A modern, responsive image gallery application built with Next.js and Unsplash A
 
 ```plaintext
 imageGallery/
-├── app/                    # Next.js app directory
-├── components/            # React components
-├── styles/               # CSS modules
-├── api/                  # API integration
+├── app/                 # Next.js app directory
+├── components/          # React components
+├── styles/              # CSS modules
+├── api/                 # API integration
 ├── services/            # Utility functions
 └── public/              # Static assets
 ```

@@ -1,39 +1,7 @@
-// import { GET_PHOTOS_PER_PAGE_URL } from '@/constants/constants';
-// import { validateResponse } from '@/services/validateResponse';
-
-// export const getPhotosApi = async (photosPerPage) => {
-//   try {
-//     const res = await fetch(GET_PHOTOS_PER_PAGE_URL(photosPerPage), {
-//       headers: {
-//         Authorization: `Client-ID ${process.env.ACCESS_KEY}`,
-//         'Content-Type': 'application/json',
-//       },
-//       method: 'GET',
-//     });
-
-//     await validateResponse(res);
-
-//     const linkHeader = res.headers.get('link');
-//     const data = await res.json();
-
-//     return {
-//       photos: data,
-//       pagination: linkHeader,
-//       error: null,
-//     };
-//   } catch (error) {
-//     return {
-//       photos: [],
-//       pagination: null,
-//       error: error.message,
-//     };
-//   }
-// };
-
 import { createApi } from 'unsplash-js';
 
 const api = createApi({
-  accessKey: process.env.NEXT_PUBLIC_ACCESS_KEY,
+  accessKey: process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY,
 });
 
 export const getPhotosListApi = async (page, photosPerPage) => {
