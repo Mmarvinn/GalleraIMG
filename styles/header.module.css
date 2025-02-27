@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+  min-height: 70px;
+  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+}
+
+.headerContainer {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: var(--font-electrolize);
+}
+
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--default-80);
+  font-weight: 400;
+  transition: color 0.2s ease;
+  font-family: var(--font-electrolize);
+}
+
+.navLink:hover {
+  color: var(--primary-300);
+}
