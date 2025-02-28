@@ -189,3 +189,10 @@ a {
   color: var(--primary-100);
   border: 1px solid var(--primary-100);
 }
+
+@media (max-width: 460px) {
+  main {
+    flex: 1 0 auto;
+    padding: 1rem 0.5rem;
+  }
+}

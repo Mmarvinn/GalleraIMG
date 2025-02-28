@@ -129,9 +129,16 @@
   left: 2px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 
   .container {
@@ -140,5 +147,16 @@
 
   .imageContainer {
     aspect-ratio: 1/1;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: 1rem;
+    gap: 1rem;
   }
 }

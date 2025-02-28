@@ -7,6 +7,7 @@ import { Carousel } from 'antd';
 import { GalleryContext } from './GalleryProvider';
 
 import styles from '@/styles/photoDetails.module.css';
+import { FavoriteBadge } from './FavoriteBadge';
 
 export const PhotoDetails = ({ photo: initialPhoto }) => {
   const carouselRef = useRef();
@@ -65,6 +66,7 @@ export const PhotoDetails = ({ photo: initialPhoto }) => {
           >
             {photos.map((photo) => (
               <div key={photo.id} className={styles.imageContainer}>
+                <FavoriteBadge photo={photo} key={photo.id} />
                 <Image
                   src={photo.urls.regular}
                   alt={photo.alt_description || 'Unsplash photo'}
