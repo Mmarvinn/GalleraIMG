@@ -51,15 +51,17 @@ export const searchPhotosApi = async (query) => {
       );
     }
 
-    console.log(result); // find results when we search
+    const url = new URL(result.originalResponse.url);
 
     return {
+      searchParams: url.search,
       photos: result.response.results,
       error: null,
     };
   } catch (error) {
     return {
       photos: [],
+      searchParams: null,
       error: error.message,
     };
   }

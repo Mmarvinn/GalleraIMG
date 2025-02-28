@@ -9,9 +9,11 @@ import { ShowErrorContainer } from './ShowErrorContainer';
 import { GalleryContext } from './GalleryProvider';
 
 import styles from '@/styles/gallery.module.css';
+import { useRouter } from 'next/navigation';
 
 export const HomeGallery = ({ initialPhotos }) => {
   const { setGalleryPhotos } = useContext(GalleryContext);
+  const router = useRouter();
 
   const [photos, setPhotos] = useState(initialPhotos);
   const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +33,14 @@ export const HomeGallery = ({ initialPhotos }) => {
     try {
       setIsLoading(true);
       setError(null);
-      const { photos: searchResults, error } = await searchPhotosApi(value);
+      const {
+        photos: searchResults,
+        error,
+        searchParams,
+      } = await searchPhotosApi(value);
+
+      const newUrl = (new URL(window.location.href).search = searchParams);
+      router.push(newUrl);
 
       if (error) {
         throw new Error(error);

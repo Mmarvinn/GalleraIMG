@@ -1,13 +1,3 @@
-// import styles from '@/styles/header.module.css';
-
-// export const Header = () => {
-//   return (
-//     <header>
-//       <p>this is the header</p>
-//     </header>
-//   );
-// };
-
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/header.module.css';
@@ -17,7 +7,8 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
-          <Link href='/' className={styles.logoLink}>
+          {/* we use tag a instead Link only for refresh page when click on logo */}
+          <a href='/' className={styles.logoLink}>
             <Image
               src='/logo.svg'
               alt='GalleraIMG Logo'
@@ -26,7 +17,7 @@ export const Header = () => {
               priority
             />
             <span className={styles.logoText}>GalleraIMG</span>
-          </Link>
+          </a>
         </div>
         <nav className={styles.navigation}>
           <Link href='/favorites' className={styles.navLink}>
