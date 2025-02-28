@@ -1,0 +1,144 @@
+.container {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  padding: 2rem;
+  color: white;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.details {
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-electrolize);
+}
+
+.description {
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.userInfo {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.userHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.userAvatar {
+  border-radius: 50%;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.userUsername {
+  color: #999;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+}
+
+.carouselContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel :global(.slick-prev),
+.carousel :global(.slick-next) {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel :global(.slick-prev:hover),
+.carousel :global(.slick-next:hover) {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel :global(.slick-next::after),
+.carousel :global(.slick-prev::after) {
+  position: relative;
+  top: auto;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel :global(.slick-next::after) {
+  left: -2px;
+}
+
+.carousel :global(.slick-prev::after) {
+  left: 2px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .imageContainer {
+    aspect-ratio: 1/1;
+  }
+}

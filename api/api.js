@@ -41,7 +41,7 @@ export const searchPhotosApi = async (query) => {
   try {
     const result = await api.search.getPhotos({
       query,
-      perPage: 20,
+      perPage: 10,
       page: 1,
     });
 
@@ -51,6 +51,8 @@ export const searchPhotosApi = async (query) => {
       );
     }
 
+    console.log(result); // find results when we search
+
     return {
       photos: result.response.results,
       error: null,
@@ -58,6 +60,28 @@ export const searchPhotosApi = async (query) => {
   } catch (error) {
     return {
       photos: [],
+      error: error.message,
+    };
+  }
+};
+
+export const getPhotoByIdApi = async (photoId) => {
+  try {
+    const result = await api.photos.get({ photoId });
+
+    if (result.errors) {
+      throw new Error(
+        `Server responded with status: ${result.status} ${result.errors[0]}`
+      );
+    }
+
+    return {
+      photo: result.response,
+      error: null,
+    };
+  } catch (error) {
+    return {
+      photo: null,
       error: error.message,
     };
   }

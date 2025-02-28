@@ -23,6 +23,10 @@ main {
   padding: 2rem 1.5rem;
 }
 
+#detailsMain {
+  background-color: #000000d9;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -61,6 +65,9 @@ a {
   --danger-300: #b12e2a;
   --danger-400: #6e1d1a;
   --success-300: #00b012;
+
+  --header-height: 70px;
+  --footer-height: 124px;
 }
 
 .loadingPageSSR {

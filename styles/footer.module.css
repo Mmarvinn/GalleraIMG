@@ -3,6 +3,8 @@
   background-color: #f8f9fa;
   padding: 1.5rem 0;
   flex-shrink: 0;
+  height: var(--footer-height);
+  max-height: var(--footer-height);
 }
 
 .footerContainer {

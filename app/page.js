@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const { photos, pagination, error } = await getPhotosListApi(1, 20);
+  const { photos, pagination, error } = await getPhotosListApi(1, 10);
 
   return (
     <main id='main'>

@@ -1,21 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+
+import { searchPhotosApi } from '@/api/api';
 import { Gallery } from './Gallery';
 import { SearchBar } from './SearchBar';
-import { searchPhotosApi } from '@/api/api';
 import { ShowErrorContainer } from './ShowErrorContainer';
+import { GalleryContext } from './GalleryProvider';
 
 import styles from '@/styles/gallery.module.css';
 
 export const HomeGallery = ({ initialPhotos }) => {
+  const { setGalleryPhotos } = useContext(GalleryContext);
+
   const [photos, setPhotos] = useState(initialPhotos);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const setPhotosInStoreAndState = (newPhotos) => {
+    setPhotos(newPhotos);
+    setGalleryPhotos(newPhotos);
+  };
+
   const handleSearch = async (value) => {
     if (!value.trim()) {
-      setPhotos(initialPhotos);
+      setPhotosInStoreAndState(initialPhotos);
       return;
     }
 
@@ -28,13 +37,17 @@ export const HomeGallery = ({ initialPhotos }) => {
         throw new Error(error);
       }
 
-      setPhotos(searchResults);
+      setPhotosInStoreAndState(searchResults);
     } catch (err) {
       setError(err.message);
     } finally {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    setGalleryPhotos(initialPhotos);
+  }, []);
 
   return (
     <>

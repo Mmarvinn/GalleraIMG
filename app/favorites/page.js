@@ -1,7 +1,5 @@
 import { FavoriteGallery } from '@/components/favorites/FavoriteGallery';
 
-import styles from '@/styles/home.module.css';
-
 export const metadata = {
   title: 'GalleraIMG | Favorites',
   description:
@@ -10,7 +8,7 @@ export const metadata = {
 
 export default function Favorites() {
   return (
-    <main id='main' className={styles.main}>
+    <main id='main'>
       <FavoriteGallery />
     </main>
   );

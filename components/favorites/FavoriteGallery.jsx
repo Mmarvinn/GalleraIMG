@@ -12,7 +12,7 @@ export const FavoriteGallery = () => {
   const [photos, setPhotos] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const { seed } = useContext(GalleryContext);
+  const { seed, setGalleryPhotos } = useContext(GalleryContext);
 
   useEffect(() => {
     try {
@@ -21,6 +21,7 @@ export const FavoriteGallery = () => {
         return;
       }
       setPhotos(localData.favorites);
+      setGalleryPhotos(localData.favorites);
     } catch (err) {
       setError('Failed to load favorites');
     } finally {
