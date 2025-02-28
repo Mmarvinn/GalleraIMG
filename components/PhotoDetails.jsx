@@ -7,7 +7,7 @@ import { Carousel } from 'antd';
 import { GalleryContext } from './GalleryProvider';
 
 import styles from '@/styles/photoDetails.module.css';
-import { FavoriteBadge } from './FavoriteBadge';
+import { FavoriteBadge } from './favorites/FavoriteBadge';
 
 export const PhotoDetails = ({ photo: initialPhoto }) => {
   const carouselRef = useRef();

@@ -3,10 +3,10 @@
 import { useContext, useEffect, useState } from 'react';
 
 import { searchPhotosApi } from '@/api/api';
-import { Gallery } from './Gallery';
+import { Gallery } from '../Gallery';
 import { SearchBar } from './SearchBar';
-import { ShowErrorContainer } from './ShowErrorContainer';
-import { GalleryContext } from './GalleryProvider';
+import { ShowErrorContainer } from '../ShowErrorContainer';
+import { GalleryContext } from '../GalleryProvider';
 
 import styles from '@/styles/gallery.module.css';
 import { useRouter } from 'next/navigation';

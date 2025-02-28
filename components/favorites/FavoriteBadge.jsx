@@ -9,7 +9,7 @@ import {
 } from '@/services/localStorage';
 
 import styles from '@/styles/favorites.module.css';
-import { GalleryContext } from './GalleryProvider';
+import { GalleryContext } from '../GalleryProvider';
 
 export const FavoriteBadge = ({ photo }) => {
   const [isFavorite, setFavorite] = useState(false);

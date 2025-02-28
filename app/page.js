@@ -1,5 +1,5 @@
 import { getPhotosListApi } from '@/api/api';
-import { HomeGallery } from '@/components/HomeGallery';
+import { HomeGallery } from '@/components/home/HomeGallery';
 import { ShowErrorContainer } from '@/components/ShowErrorContainer';
 
 export const metadata = {

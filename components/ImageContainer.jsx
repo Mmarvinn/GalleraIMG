@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import { FavoriteBadge } from './FavoriteBadge';
+import { FavoriteBadge } from './favorites/FavoriteBadge';
 
 import styles from '@/styles/gallery.module.css';
 
