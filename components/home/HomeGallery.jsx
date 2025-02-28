@@ -67,8 +67,12 @@ export const HomeGallery = ({ initialPhotos }) => {
         <div className={styles.emptyState}>
           <p>We are searching...</p>
         </div>
-      ) : (
+      ) : photos.length !== 0 ? (
         <Gallery photos={photos} />
+      ) : (
+        <div className={styles.emptyState}>
+          <p>Sorry, nothing was found for your request</p>
+        </div>
       )}
     </>
   );
